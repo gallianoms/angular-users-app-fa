@@ -1,0 +1,8 @@
+<h3>User New Component</h3>
+
+<form (submit)="createUser()">
+  <input type="text" name="firstName" [(ngModel)]="newUser.firstName" placeholder="firstName">
+  <input type="text" name="lastName" [(ngModel)]="newUser.lastName" placeholder="lastName">
+  <input type="text" name="email" [(ngModel)]="newUser.email" placeholder="email">
+  <button type="submit">Submit</button>
+</form>

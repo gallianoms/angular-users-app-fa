@@ -1,0 +1,15 @@
+<h3>User List Component</h3>
+
+<div *ngFor="let user of users">
+  {{ user._id }} - {{ user.firstName }} - {{ user.lastName }} - {{ user.email }}
+
+  <button (click)="user.editable = !user.editable">
+    Edit
+  </button>
+
+  <button (click)="deleteUser(user)">
+    Delete
+  </button>
+
+  <app-user-edit *ngIf="user.editable" [user]="user" (editUserEvent)="editUser($event)"></app-user-edit>
+</div>
